@@ -43,7 +43,7 @@ test("Veify Radio Button actions",async({page})=>{
 
 })
 
-test.only("Veify check Box actions",async({page})=>{
+test("Veify check Box actions",async({page})=>{
 
 
     await  page.goto("https://testautomationpractice.blogspot.com/");
