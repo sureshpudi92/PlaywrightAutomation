@@ -102,7 +102,7 @@ for( const checkbox of checkboxes){
 
 //Select checkboxes randomly 1,3,6
 
-const randomIndexes:number[]=[0,1,3];
+const randomIndexes:number[]=[1,3,6];
 
 for(const i of randomIndexes){
 
@@ -112,7 +112,7 @@ for(const i of randomIndexes){
 }
 
 //select checkbox based on the label
-const weekname:string="Monday";
+const weekname:string="Friday";
 for( const label of days){
 
     if(label===weekname){
