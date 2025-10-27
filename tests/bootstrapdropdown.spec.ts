@@ -30,13 +30,23 @@ test("verify bootstrap dropdowns",async({page})=>{
     }   
 
     //click on specific job title--->QA Lead
-    for(let i=0;i<count;i++){
+    /* for(let i=0;i<count;i++){
 
         const title:string=await jobtitles.nth(i).innerText();
         if(title==="QA Lead"){
             await jobtitles.nth(i).click();
             break;
 
+        }
+    } */
+
+    //Another way
+
+    for(const title of jobtitlestext){
+
+        if(title==="QA Lead"){
+
+            await jobtitles.nth(jobtitlestext.indexOf(title)).click();
         }
     }
 
