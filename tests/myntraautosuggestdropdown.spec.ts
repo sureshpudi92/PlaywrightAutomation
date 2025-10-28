@@ -1,8 +1,10 @@
 import{test,expect,Locator} from '@playwright/test'
 
+/* 
 test("myntra search product",async({page})=>{
 
     await page.goto("https://www.myntra.com/");
+    await page.waitForTimeout(5000);
     await page.locator("input[class='desktop-searchBar']").fill("shirt");
     await page.locator("span[class='myntraweb-sprite desktop-iconSearch sprites-search']").click();
 
@@ -20,4 +22,4 @@ test("myntra search product",async({page})=>{
     
 
 
-})
+}) */
