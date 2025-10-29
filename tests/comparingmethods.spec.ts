@@ -46,8 +46,12 @@ test("innertext and textcontent comprison",async ({page})=>{
     console.log(await names2productloc.innerText());
   }
 
+  // for in loop
 
+for( let i in productlocators){
 
+  console.log(await productlocators[i].innerText());
+}
 
 
 
