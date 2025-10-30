@@ -64,9 +64,42 @@ test("static web table",async ({page})=>{
 
         const cols=await row.locator("td").allInnerTexts();
         console.log(cols.join('\t'));
+      }
 
+      5//Print Author name and subject  for makesh
+
+      const mukeshbooks:string[]=[];
+      for(let row of allrows.slice(1)){ //to skip header row
+
+        const cols:string[]=await row.locator("td").allInnerTexts();
+        const author= cols[1];
+        const book= cols[0];
+
+        if(author==='Mukesh'){
+
+          console.log(`${author} \t ${book}`);
+          mukeshbooks.push(book);
+
+
+
+       }
+
+       
+      }
+      expect(mukeshbooks).toHaveLength(2);
+
+      // Print total price of all books
+
+      let totalprice:number=0;
+      for(let row of allrows.slice(1)){ //to skip header row
+
+        const cols:string[]=await row.locator("td").allInnerTexts();
+        const price= cols[3];
+        totalprice=totalprice+parseInt(price);
 
       }
+      console.log(totalprice);
+      expect(totalprice).toBe(7100);
 
 
 })
